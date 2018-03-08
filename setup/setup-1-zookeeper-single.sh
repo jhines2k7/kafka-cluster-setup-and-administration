@@ -32,13 +32,13 @@ bin/zookeeper-server-start.sh config/zookeeper.properties
 # Testing Zookeeper install
 # Start Zookeeper in the background
 bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
-bin/zookeeper-shell.sh localhost:2181
+# bin/zookeeper-shell.sh localhost:2181
 
-PID=$!
+# PID=$!
 
-ls /
+# ls /
 
-kill $PID
+# kill $PID
 # demonstrate the use of a 4 letter word
 echo "ruok" | nc localhost 2181 ; echo
 
