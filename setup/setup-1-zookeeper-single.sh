@@ -37,7 +37,8 @@ ls /
 echo "ruok" | nc localhost 2181 ; echo
 
 # Install Zookeeper boot scripts
-sudo nano /etc/init.d/zookeeper
+# sudo nano /etc/init.d/zookeeper
+sudo cp zookeeper/zookeeper /etc/init.d 
 sudo chmod +x /etc/init.d/zookeeper
 sudo chown root:root /etc/init.d/zookeeper
 # you can safely ignore the warning
