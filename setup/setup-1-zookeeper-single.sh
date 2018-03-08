@@ -23,24 +23,6 @@ wget http://apache.mirror.digitalpacific.com.au/kafka/0.10.2.1/kafka_2.12-0.10.2
 tar -xvzf kafka_2.12-0.10.2.1.tgz
 rm kafka_2.12-0.10.2.1.tgz
 mv kafka_2.12-0.10.2.1 kafka
-cd /home/ubuntu/kafka/
-# Zookeeper quickstart
-# cat config/zookeeper.properties
-# bin/zookeeper-server-start.sh config/zookeeper.properties
-# binding to port 2181 -> you're good. Ctrl+C to exit
-
-# Testing Zookeeper install
-# Start Zookeeper in the background
-bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
-# bin/zookeeper-shell.sh localhost:2181
-
-# PID=$!
-
-# ls /
-
-# kill $PID
-# demonstrate the use of a 4 letter word
-echo "ruok" | nc localhost 2181 ; echo
 
 # Install Zookeeper boot scripts
 # sudo nano /etc/init.d/zookeeper
@@ -58,7 +40,6 @@ nc -vz localhost 2181
 sudo service zookeeper start
 # verify it's started
 nc -vz localhost 2181
-echo "ruok" | nc localhost 2181 ; echo
 # check the logs
 cd /home/ubuntu/kafka
 cat logs/zookeeper.out
