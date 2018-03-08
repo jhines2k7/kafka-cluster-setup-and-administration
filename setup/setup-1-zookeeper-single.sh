@@ -44,6 +44,7 @@ echo "ruok" | nc localhost 2181 ; echo
 
 # Install Zookeeper boot scripts
 # sudo nano /etc/init.d/zookeeper
+cd /home/ubuntu/kafka-cluster-setup-and-administration
 sudo cp zookeeper/zookeeper /etc/init.d 
 sudo chmod +x /etc/init.d/zookeeper
 sudo chown root:root /etc/init.d/zookeeper
@@ -59,4 +60,5 @@ sudo service zookeeper start
 nc -vz localhost 2181
 echo "ruok" | nc localhost 2181 ; echo
 # check the logs
+cd /home/ubuntu/kafka
 cat logs/zookeeper.out
