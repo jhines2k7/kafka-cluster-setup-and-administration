@@ -32,14 +32,14 @@ sudo chmod +x /etc/init.d/zookeeper
 sudo chown root:root /etc/init.d/zookeeper
 # you can safely ignore the warning
 sudo update-rc.d zookeeper defaults
+
 # stop zookeeper
 sudo service zookeeper stop
-# verify it's stopped
-nc -vz localhost 2181
+
 # start zookeeper
 sudo service zookeeper start
-# verify it's started
-nc -vz localhost 2181
+
 # check the logs
 cd /home/ubuntu/kafka
+
 cat logs/zookeeper.out
