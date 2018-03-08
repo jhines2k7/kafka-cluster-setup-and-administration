@@ -23,7 +23,7 @@ wget http://apache.mirror.digitalpacific.com.au/kafka/0.10.2.1/kafka_2.12-0.10.2
 tar -xvzf kafka_2.12-0.10.2.1.tgz
 rm kafka_2.12-0.10.2.1.tgz
 mv kafka_2.12-0.10.2.1 kafka
-cd kafka/
+cd /home/ubuntu/kafka/
 # Zookeeper quickstart
 # cat config/zookeeper.properties
 # bin/zookeeper-server-start.sh config/zookeeper.properties
