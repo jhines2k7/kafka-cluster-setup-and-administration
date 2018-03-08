@@ -18,6 +18,7 @@ echo "10.0.0.77 kafka1
 10.0.0.28 zookeeper3" | sudo tee --append /etc/hosts
 
 # download Zookeeper and Kafka. Recommended is latest Kafka (0.10.2.1) and Scala 2.12
+cd /home/ubuntu
 wget http://apache.mirror.digitalpacific.com.au/kafka/0.10.2.1/kafka_2.12-0.10.2.1.tgz
 tar -xvzf kafka_2.12-0.10.2.1.tgz
 rm kafka_2.12-0.10.2.1.tgz
@@ -32,7 +33,12 @@ bin/zookeeper-server-start.sh config/zookeeper.properties
 # Start Zookeeper in the background
 bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
 bin/zookeeper-shell.sh localhost:2181
+
+PID=$!
+
 ls /
+
+kill $PID
 # demonstrate the use of a 4 letter word
 echo "ruok" | nc localhost 2181 ; echo
 
