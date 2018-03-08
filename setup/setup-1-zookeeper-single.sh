@@ -25,8 +25,8 @@ rm kafka_2.12-0.10.2.1.tgz
 mv kafka_2.12-0.10.2.1 kafka
 cd kafka/
 # Zookeeper quickstart
-cat config/zookeeper.properties
-bin/zookeeper-server-start.sh config/zookeeper.properties
+# cat config/zookeeper.properties
+# bin/zookeeper-server-start.sh config/zookeeper.properties
 # binding to port 2181 -> you're good. Ctrl+C to exit
 
 # Testing Zookeeper install
