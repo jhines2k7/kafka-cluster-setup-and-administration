@@ -10,12 +10,12 @@ sudo sysctl vm.swappiness=1
 echo 'vm.swappiness=1' | sudo tee --append /etc/sysctl.conf
 
 # Add hosts entries (mocking DNS) - put relevant IPs here
-echo "10.0.0.171 kafka1
-10.0.0.171 zookeeper1
-10.0.0.210 kafka2
-10.0.0.210 zookeeper2
-10.0.0.30 kafka3
-10.0.0.30 zookeeper3" | sudo tee --append /etc/hosts
+echo "10.0.0.136 kafka1
+10.0.0.136 zookeeper1
+10.0.0.52 kafka2
+10.0.0.52 zookeeper2
+10.0.0.218 kafka3
+10.0.0.218 zookeeper3" | sudo tee --append /etc/hosts
 
 # download Zookeeper and Kafka. Recommended is latest Kafka (0.10.2.1) and Scala 2.12
 cd /home/ubuntu
