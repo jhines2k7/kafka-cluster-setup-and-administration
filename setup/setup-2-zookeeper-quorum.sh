@@ -8,7 +8,7 @@ echo "1" > /data/zookeeper/myid
 
 # copy zookeeper settings
 rm /home/ubuntu/kafka/config/zookeeper.properties
-cp zookeeper/zookeeper.properties /home/ubuntu/kafka/config/zookeeper.properties
+cp /home/ubuntu/kafka-cluster-setup-and-administration/zookeeper/zookeeper.properties /home/ubuntu/kafka/config/zookeeper.properties
 
 # restart the zookeeper service
 sudo service zookeeper stop
