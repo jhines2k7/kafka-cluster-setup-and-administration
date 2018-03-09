@@ -40,6 +40,4 @@ sudo service zookeeper stop
 sudo service zookeeper start
 
 # check the logs
-cd /home/ubuntu/kafka
-
-cat logs/zookeeper.out
+cat /home/ubuntu/kafka/logs/zookeeper.out
